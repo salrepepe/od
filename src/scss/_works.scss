@@ -30,11 +30,12 @@
 
     li button:before {
       font-size: 28px;
-      color: white;
+      color: white!important;
+      opacity: 1!important;
     }
 
     li.slick-active button:before {
-      color: #5699E8;
+      color: #5699E8!important;
       opacity: 1;
   
     }
@@ -58,5 +59,10 @@
     right: 24px;
     @include txt(16px, 600);
     color: #5699E8;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: #fff
+    }
   }
 }

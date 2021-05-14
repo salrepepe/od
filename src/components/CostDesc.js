@@ -30,8 +30,8 @@ const CostDesc = () => {
             <p className="cost-desc__numbers">6</p>
             <h4 className="cost-desc__cards">Внутренняя SEO оптимизация сайта под поисковики Google и Яндекс.</h4>
           </div>
-
         </div>
+        
       </div>
     </section>
   );

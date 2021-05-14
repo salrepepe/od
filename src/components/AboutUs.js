@@ -22,10 +22,10 @@ const AboutUs = () => {
           </div>
         </div>
         <p className="aboutUs__descr">Стек технологий, который мы используем, позволяет нам делать выбор из нескольких вариантов решения вашей задачи - самый лучший и наиболее подходящий для вас.</p>
-        {/* <div className="aboutUs__ellipsisBlock">
+        <div className="aboutUs__ellipsisBlock">
           <div className="aboutUs__ellipsis"></div>
           <div className="aboutUs__ellipsis"></div>
-        </div> */}
+        </div>
         <button type="button" className="aboutUs__button"><img src={message} alt="message" /></button>
       </div>
     </section>

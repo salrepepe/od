@@ -2,7 +2,6 @@
   padding: 100px 0 312px;
   position: relative;
   background: #2a2f37;
-  z-index: 5;
 
   &__title {
     @include title;
@@ -48,6 +47,7 @@
     height: 568px;
     background: #353940;
     border-radius: 100%;
+    animation: ellipse 2s infinite  linear;
 
     &:last-child {
       top: 100px;
@@ -55,6 +55,24 @@
       width: 460px;
       height: 459px;
       background: #3f434a;
+    }
+  }
+
+  @keyframes ellipse {
+    0% {
+      transform:scale(.8)
+    }
+    25% {
+      transform:scale(.9)
+    }
+    50% {
+      transform:scale(1)
+    }
+    75% {
+      transform:scale(.9)
+    }
+    100% {
+      transform:scale(.8)
     }
   }
 

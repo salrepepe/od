@@ -1,5 +1,5 @@
 .feedbacks {
-  padding-top: 40px;
+  padding: 40px 0;
 
   &__title {
     @include title;
@@ -16,14 +16,13 @@
 
     li button:before {
       font-size: 28px;
-      color: white;
-      &:last-child {
-        display: none;
-      }
+      color: white!important;
+      opacity: 1!important;
+
     }
 
     li.slick-active button:before {
-      color: #5699E8;
+      color: #5699E8!important;
       opacity: 1;
   
     }
@@ -61,12 +60,6 @@
       }
     }
 
-
-
-
-
-    
-
     &__img {
       width: 150px ;
       height: 100px;
@@ -94,14 +87,19 @@
   &__button {
     position: absolute;
     top: 40%;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.2);
+    }
 
     &.right {
-      right: 0;
+      transform: rotate(180deg);
+      left: 0;
     }
 
     &.left {
-      transform: rotate(180deg);
-      left: 0;
+      right: 0;
     }
   }
 }

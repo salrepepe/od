@@ -62,7 +62,7 @@ const Feedbacks = () => {
     Ребята разработали сайт буквально за пол-месяца, количество клиентов, которые пришли с сайта уже возросло в 1,5 раза.
      </h5>
 </div>
-  ]
+  ];
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -83,7 +83,7 @@ const Feedbacks = () => {
     centerMode: true,
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 3,
     slidestoScroll: 1,
     nextArrow: <NextArrow />,
@@ -129,7 +129,6 @@ const Feedbacks = () => {
             </div>
           ))}
         </Slider>
-
       </div>
     </section>
   );

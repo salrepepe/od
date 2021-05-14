@@ -4,6 +4,7 @@ import AboutUs from './AboutUs';
 import CostDesc from './CostDesc';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
+import Cta from './Cta';
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <CostDesc />
       <Works />
       <Feedbacks />
+      <Cta />
     </main>
   );
 };
