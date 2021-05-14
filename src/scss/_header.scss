@@ -1,0 +1,35 @@
+.header {
+  padding: 20px 0;
+  background: #1F242B;
+  border-bottom: 1px solid #656363;
+
+  &__logo {
+    margin-right: 80px;
+  }
+
+  .nav {
+
+
+    &-item {
+      @include txt(16px, normal);
+      text-decoration: none;
+      position: relative;
+      margin-right: 54px;
+      display: inline-block;
+      max-width: 100%;
+      width: auto;
+      
+
+      &:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: #E5E5E5;
+        border-radius: 100%;
+        position: absolute;
+        top: 10px;
+        right: -30px;
+      }
+    }
+  }
+}

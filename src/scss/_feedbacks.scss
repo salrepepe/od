@@ -1,0 +1,93 @@
+.feedbacks {
+  padding-top: 40px;
+
+  &__title {
+    @include title;
+
+  }
+  .slick-list {
+    padding: 0 !important;
+  }
+
+  .slick-dots {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+
+    li button:before {
+      font-size: 28px;
+      color: white;
+      &:last-child {
+        display: none;
+      }
+    }
+
+    li.slick-active button:before {
+      color: #5699E8;
+      opacity: 1;
+  
+    }
+  }
+
+  .cards {
+    @include cards(500px !important, 518px, 24px);
+    transform: scale(0.5);
+    transition: .3s linear all;
+
+    &_active {
+      transform: scale(.8);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(31, 36, 43, 0.6);
+    }
+
+
+    
+
+    &__img {
+      width: 150px ;
+      height: 100px;
+      background: #FFFFFF;
+      border-radius: 95px;
+      margin-right: 40px;
+    }
+
+    &__name {
+      @include txt(24px, bold); 
+    }
+
+    &__job {
+      @include txt(16px, normal);
+      max-width: 308px;
+    }
+
+    &__feedback {
+      @include txt(16px, 400);
+      margin-top: 26px;
+      max-width: 448px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 40%;
+
+    &.right {
+      right: 0;
+    }
+
+    &.left {
+      transform: rotate(180deg);
+      left: 0;
+    }
+  }
+}

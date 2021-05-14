@@ -1,0 +1,31 @@
+@import url('../fonts/SegoeUI/stylesheet.css');
+@import url('../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css');
+@import url(../../node_modules/slick-carousel/slick/slick.css);
+@import url(../../node_modules/slick-carousel/slick/slick-theme.css);
+
+
+@import '../scss/mixins';
+@import '../scss/header';
+@import '../scss/home';
+@import '../scss/aboutUs';
+@import '../scss/cost-desc';
+@import '../scss/works';
+@import '../scss/feedbacks';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #1F242B;
+  overflow-x: hidden;
+
+}
+

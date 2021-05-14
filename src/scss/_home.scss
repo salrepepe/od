@@ -1,0 +1,79 @@
+.home {
+  padding: 120px;
+  position: relative;
+  background: #1f242c;
+  &__title {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      background: #f91942;
+      width: 124px;
+      height: 2px;
+    }
+  }
+
+  &__subtitle {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 73.22px 0 48px;
+  }
+
+  &__descr {
+    @include txt(24px, normal);
+    max-width: 430px;
+    margin-bottom: 48px;
+  }
+
+  &__button {
+    width: 280px;
+    height: 56px;
+    background: #F91941;
+    box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.25);
+    border-radius: 45px;
+    border: none;
+    @include txt(24px, normal);
+  }
+
+  &__img {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    z-index: 5;
+  }
+
+  &__ellipsisBlock {
+    position: relative;
+    
+  }
+
+  &__ellipse {
+    z-index: 0;
+    top: -67px;
+    left: -20px;
+    position: absolute;
+    width: 858px;
+    height: 856px;
+    background: #2a2f37;
+    border-radius: 100%;
+    &:last-child {
+      z-index: 4;
+      top: 40px;
+      left: 105px;
+      position: absolute;
+      width: 618px;
+      height: 618px;
+      border-radius: 100%;
+      background: #353940;
+
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.works {
+
+  .container {
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__title {
+    @include title;
+    margin: 0 0 24px 80px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transition: 0.2s all linear;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+
+  .slick-dots {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+
+    li button:before {
+      font-size: 28px;
+      color: white;
+    }
+
+    li.slick-active button:before {
+      color: #5699E8;
+      opacity: 1;
+  
+    }
+  }
+
+  &__slide {
+    position: relative;
+  }
+
+  &__cards {
+    position: absolute;
+    top: 23%;
+    left: 12%;
+    @include cards(400px, 312px, 24px);
+    @include txt(16px, 400);
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 33px;
+    right: 24px;
+    @include txt(16px, 600);
+    color: #5699E8;
+  }
+}
