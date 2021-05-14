@@ -23,8 +23,6 @@
   position: relative;
   margin-right: 54px;
   display: inline-block;
-  max-width: 100%;
-  width: auto;
 }
 
 .header .nav-item:before {
@@ -38,8 +36,13 @@
   right: -30px;
 }
 
+.header .nav-item:last-child:before {
+  width: 0;
+  height: 0;
+}
+
 .home {
-  padding: 120px;
+  padding: 134px;
   position: relative;
   background: #1f242c;
 }
