@@ -28,11 +28,11 @@
       outline: none;
       padding:10px;
       
-      &:valid{&:not(:placeholder-shown){
-        border: 2px solid #5699E8;
-      }
+      // &:valid{&:not(:placeholder-shown){
+      //   border: 2px solid #5699E8;
+      // }
     }
-    }
+  
 
     .input__title {
       @include txt(16px, normal);

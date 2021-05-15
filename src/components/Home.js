@@ -4,7 +4,7 @@ import notebook from '../images/home/notebook.svg';
 
 const Home = () => {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <div className="container">
         <div className="row">
           <div className="col-6">

@@ -52,6 +52,10 @@
     top: 4%;
     right: 2%;
     z-index: 1;
+
+    &.second {
+      top: 18%;
+    }
   }
 
   &__ellipsisBlock {

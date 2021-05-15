@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Home';
-import AboutUs from './AboutUs';
+import AboutUsMain from './AboutUs/AboutUsMain';
 import CostDesc from './CostDesc';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <main className="main">
       <Home />
-      <AboutUs />
+      <AboutUsMain />
       <CostDesc />
       <Works />
       <Feedbacks />

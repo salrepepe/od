@@ -18,13 +18,14 @@ const Works = () => {
     speed: 500,
     slidesToShow: 1,
     slidestoScroll: 1,
-    nextArrow: <NextArrow />
+    nextArrow: <NextArrow />,
+    focusOnSelect: true,
   };
 
 
   
   return (
-    <section className="works">
+    <section className="works" id="works">
       <div className="container">
         <h2 className="works__title">Наши работы</h2>
         <Slider {...settings}>

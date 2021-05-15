@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cta = () => {
   return (
-    <section className="cta">
+    <section className="cta" id="cta">
       <div className="container d-flex justify-content-center align-items-center">
         <div className="">
           <h2 className="cta__title">Оставить заявку на бесплатную консультацию</h2>

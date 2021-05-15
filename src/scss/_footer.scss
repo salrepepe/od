@@ -1,3 +1,30 @@
 .footer {
-  
+  padding: 80px 0 40px;
+
+  &__txt {
+    @include txt(16px, normal);
+    margin-bottom: 40px;
+    text-decoration: none;
+    &.last {
+      text-align: center;
+    }
+
+    .txtIcon {
+      margin-left: 17px;
+    }
+  }
+
+  .logo-line {
+    width: 164px;
+    height: 1px;
+    background: white;
+    margin: 24.5px 0;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin: 80px 0 24px;
+  }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const CostDesc = () => {
   return (
-    <section className="cost-desc">
+    <section className="cost-desc" id="cost-desc">
       <div className="container">
         <h2 className="cost-desc__title">Что входит в работу по разработке сайта?</h2>
         <div class="row">
