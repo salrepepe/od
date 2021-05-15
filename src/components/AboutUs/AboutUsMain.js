@@ -4,6 +4,7 @@ import message from '../../images/aboutUs/message.svg'
 const AboutUsMain = () => {
   return (
     <section className="aboutUsMain" id="aboutUs">
+      <div className="aboutUsMain__ellipse"></div>
       <div className="container">
         <h2 className="aboutUsMain__title">Мы не просто создаем сайты - мы решаем задачи вашего бизнеса</h2>
         <h3 className="aboutUsMain__subtitle">Наши проекты решают ряд бизнес-задач:</h3>
@@ -22,11 +23,11 @@ const AboutUsMain = () => {
           </div>
         </div>
         <p className="aboutUsMain__descr">Стек технологий, который мы используем, позволяет нам делать выбор из нескольких вариантов решения вашей задачи - самый лучший и наиболее подходящий для вас.</p>
-        <div className="aboutUsMain__ellipsisBlock">
-          <div className="aboutUsMain__ellipsis"></div>
-          <div className="aboutUsMain__ellipsis"></div>
+        <div className="ellipsis-block">
+          <div className="ellipsis-block__ellipsis"></div>
+          <div className="ellipsis-block__ellipsis"></div>
+          <button type="button" className="aboutUsMain__button"><img src={message} alt="message" /></button>
         </div>
-        <button type="button" className="aboutUsMain__button"><img src={message} alt="message" /></button>
       </div>
     </section>
   );

@@ -34,17 +34,17 @@ const Footer = () => {
                </a>
            </div>
            <div className="col-3 d-flex flex-column">
-            <a href="#" className=" footer__txt d-flex">
+            <a href="tel:+996709683738" className=" footer__txt d-flex">
               <img src={icon2}/>
               <p className="txtIcon">+996 709 683 738</p>
               </a>
-            <a href="#" className="footer__txt d-flex">
+            <a href="tel:+996557978715" className="footer__txt d-flex">
               <img src={icon2}/>
               <p className="txtIcon">+996 557 978 715</p></a>
-            <a href="#" className="footer__txt d-flex">
+            <a href="mailto:contact@odigital.dev" className="footer__txt d-flex">
               <img src={icon1}/>
-              <p className="txtIcon">CONTACT@ODIGITAL.DEV</p></a>
-            <a href="#" className="footer__txt d-flex">
+              <p className="txtIcon">contact@odigital.dev</p></a>
+            <a href="https://go.2gis.com/7freqb" className="footer__txt d-flex">
               <img src={icon3}/>
               <p className="txtIcon">Кыргызстан, Бишкек, ул. Тимирязева 80</p>
             </a>

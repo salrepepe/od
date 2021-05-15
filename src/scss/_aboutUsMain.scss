@@ -1,7 +1,17 @@
 .aboutUsMain {
   padding: 100px 0 312px;
-  position: relative;
   background: #2a2f37;
+  position: relative;
+
+  &__ellipse {
+      top: -69%;
+      right: 0%;
+      position: absolute;
+      width: 618px;
+      height: 618px;
+      border-radius: 100%;
+      background: #353940;
+  }
 
   &__title {
     @include title;
@@ -35,28 +45,32 @@
     margin-top: 48px;
   }
 
-  &__ellipsisBlock {
+  .ellipsis-block {
     position: relative;
-  }
+    z-index: 0;
 
-  &__ellipsis {
-    position: absolute;
-    top: 38px;
-    left: -332px;
-    width: 569px;
-    height: 568px;
-    background: #353940;
-    border-radius: 100%;
-    animation: ellipse 2s infinite  linear;
-
-    &:last-child {
-      top: 100px;
-      left: -300px;
-      width: 460px;
-      height: 459px;
-      background: #3f434a;
+    &__ellipsis {
+      position: absolute;
+      top: 47px;
+      left: -27%;
+      width: 569px;
+      height: 568px;
+      background: #353940;
+      border-radius: 100%;
+      animation: ellipse 2s infinite  linear;
+  
+      &:nth-child(2) {
+        top: 100px;
+        left: -300px;
+        width: 460px;
+        height: 459px;
+        background: #3f434a;
+      }
     }
+
   }
+
+
 
   @keyframes ellipse {
     0% {
@@ -78,7 +92,7 @@
 
   &__button {
     position: absolute;
-    bottom: 57px;
+    bottom: -270px;
     right: 70px;
     width: 80px;
     height: 80px;

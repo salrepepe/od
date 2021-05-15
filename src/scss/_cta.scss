@@ -27,10 +27,11 @@
       color: #FFFFFF;
       outline: none;
       padding:10px;
+      transition: ease all 0.3s ;
       
-      // &:valid{&:not(:placeholder-shown){
-      //   border: 2px solid #5699E8;
-      // }
+      &:valid:focus{
+        border: 1px solid #5699E8;
+      }
     }
   
 

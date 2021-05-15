@@ -15,10 +15,7 @@ const Home = () => {
           </div>
             <div className="col-6">
             <img src={notebook} className="home__img" alt="notebook" />
-            <div className="home__ellipsisBlock">
               <div className="home__ellipse"></div>
-              <div className="home__ellipse"></div>
-            </div>
           </div>
         </div>
       </div>

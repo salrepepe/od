@@ -5,6 +5,10 @@
     @include txt(16px, normal);
     margin-bottom: 40px;
     text-decoration: none;
+    transition: all 0.3s linear;
+    &:hover {
+      color: #5699E8;
+    }
     &.last {
       text-align: center;
     }
