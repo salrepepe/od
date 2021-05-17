@@ -701,11 +701,11 @@
 .feedbacks__button.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  left: 28%;
+  left: 0;
 }
 
 .feedbacks__button.left {
-  right: 31%;
+  right: 0;
 }
 
 .cta {
