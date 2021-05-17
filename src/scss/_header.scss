@@ -2,6 +2,18 @@
   padding: 20px 0;
   background: #1F242B;
   border-bottom: 1px solid #656363;
+  z-index: 999;
+  width: 100%;
+  transition: all 0.5s linear;
+  position: fixed;
+
+  &_sticky {
+    background: #1F242B90;
+    border: none;
+    padding: 10px 0;
+
+  }
+
 
   &__logo {
     margin-right: 80px;
@@ -15,6 +27,12 @@
       position: relative;
       margin-right: 54px;
       display: inline-block;
+      transition: all 0.3s linear;
+
+      &:hover {
+        color: #5699E8;
+      }
+
       &.active {
         font-weight: bold;
       }

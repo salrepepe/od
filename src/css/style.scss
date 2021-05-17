@@ -14,6 +14,7 @@
 @import '../scss/cta';
 @import '../scss/footer';
 @import '../scss/aboutUs';
+@import '../scss/popup';
 
 * {
   padding: 0;
@@ -26,9 +27,395 @@ html {
   overflow-x: hidden;
 }
 
+.aboutUs {
+  overflow-x: hidden;
+}
+
 body {
   background: #1F242B;
   overflow-x: hidden;
-
 }
 
+@media (max-width: 1400px) {
+  .aboutUs .our-team__img {
+    width: 266px;
+    height: 267px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .aboutUsMain__ellipse {
+    top: -60%;
+    right: 0%;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  }   
+
+  .aboutUsMain__ellipse.aboutUs {
+    top: -38%;
+  }
+
+  // .home__ellipse.aboutUs {
+  //   top: 41%;
+  // }
+
+  .home__img {
+    position: absolute;
+    top: 15%;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .home__ellipse {
+    top: 19%;
+    right: -8%;
+    position: absolute;
+    width: 700px;
+    height: 700px;
+  }
+
+  .aboutUsMain {
+    padding: 100px 0 230px;
+  }
+
+  .aboutUsMain__cards {
+    font-size: 18px;
+    &:last-child {
+      margin-top: 18px;
+    }
+  }
+
+  .aboutUsMain__ellipse {
+    top: -50%;
+  }
+
+  .aboutUsMain .ellipsis-block__ellipsis {
+    left: -349px;
+    top: 0;
+    width: 569px;
+  }
+
+  .aboutUsMain .ellipsis-block__ellipsis:nth-child(2) {
+    top: 64px;
+    left: -300px;
+  }
+
+  .aboutUsMain__button {
+    position: absolute;
+    bottom: -156px;
+  }
+
+  .cost-desc {
+    padding: 80px 0 126px;
+  }
+
+  .cost-desc__cards {
+    font-size: 20px;
+  }
+
+  .slick-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .feedbacks .cards {
+    width: 482px !important;
+  }
+
+  .footer {
+    padding: 80px 0 0px;
+  }
+
+  .aboutUs .dev-process .row .col-sm-12 {
+    width: 453px;
+  }
+
+  .aboutUs .dev-process .row .col{
+    margin: 18px 0 0 ;
+  }
+
+  .aboutUs .main-page {
+    padding: 241px 0 163px;
+  }
+  
+}
+
+@media (max-width: 992px) {
+  .header .nav-item {
+    font-size: 13px;
+  }
+
+  .home .container {
+    margin-left: 30px;
+  }
+
+  .home__ellipse {
+    top: 24%;
+    right: -11%;
+  }
+
+  .home__img {
+    top: 24%;
+  }
+
+  .aboutUsMain__ellipse {
+    top: -42%;
+  }
+
+  .works__cards {
+    width: 363px;
+    height: 237px;
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .works__link {
+    position: absolute;
+    bottom: 14px;
+    font-size: 14px;
+  }
+
+  .footer__txt {
+    font-size: 13px
+  }
+
+  .aboutUs .main-page__txt {
+    font-size: 17px;
+  }
+
+  .home__ellipse {
+    width: 600px;
+    height: 600px;
+  }
+
+  .aboutUsMain__ellipse {
+    top: -39%;
+    right: 0%;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+  }
+
+  .aboutUs .main-page {
+    padding: 241px 0 107px;
+  }
+
+  .home__ellipse.aboutUs {
+    top: 24%;
+    right: -11%;
+  }
+
+  .aboutUsMain__ellipse.aboutUs {
+    top: -22%;
+  }
+
+  .aboutUs .dev-process .row .col-sm-12 {
+    margin: 18px 0 0;
+  }
+
+  .home__img.aboutUs {
+    top: 24%;
+    right: -2%
+  }
+}
+
+@media (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .nav {
+    display: none;
+    z-index: 9;
+    background: #2a2f3780;
+    transition: all .6s linear;
+    
+    .d-flex {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .header__logo { 
+        display: none;       
+      }
+      .nav-item {
+        font-size: 33px;
+        line-height: unset;
+        color: #fff;
+        transition: all .3s linear;
+        &:hover {
+          color: #5699E8
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &_active {
+      transition: all .9s linear;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+
+    &__line {
+      height: 3px;
+      width: 100%;
+      background: #fff;
+      transition: all 0.3s linear;
+      margin-bottom: 8px;
+      border-radius: 8px;
+
+      &:nth-child(2) {
+        margin-bottom: 8px;
+      }
+
+      &_active {
+        transform: rotate(45deg);
+        margin: 0;
+        &:nth-child(2) {
+          transition: all 0.3s linear;
+          display: none;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+
+
+  .home {
+    padding-bottom: 886px;
+  }
+
+  .home__ellipse {
+    top: 50%;
+  }
+
+  .aboutUsMain__ellipse {
+    top: -56%;
+    right: 2%;
+  }
+
+  .home__img {
+    top: 52%;
+    right: -4%;
+    width: 560px;
+  }
+
+  .works__cards {
+    top: 14%;
+    left: 5%;
+  }
+
+  .slick-slide img {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .works__button {
+    top: 49%;
+    right: 0%;
+  }
+
+  .feedbacks .cards {
+    transform: scale(0.4);
+}
+
+  .feedbacks .cards_active {
+    transform: scale(0.6);
+  }
+
+  // .slick-current div {
+  //   &:first-of-type{
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+  // }
+
+  .feedbacks__button {
+    display: none;
+  }
+
+  .footer .container .row .col-sm-12 {
+    &:nth-child(2) {
+      display: none!important;
+    }
+  }
+
+  .our-team .container .row {
+    justify-content: center;
+  }
+
+  .aboutUs .our-team__img {
+    margin: auto;
+  }
+
+  .aboutUs .our-team__name {
+    text-align: center;
+  }
+
+  .aboutUs .our-team__job {
+    text-align: center;
+  }
+
+  .aboutUs .main-page {
+    padding: 241px 0 700px;
+  }
+
+  .home__ellipse.aboutUs {
+    top: 62%;
+  }
+
+  .aboutUsMain__ellipse.aboutUs {
+    top: -17%;
+    right: 2%;
+  }
+
+  .home__img.aboutUs {
+      top: 65%;
+      right: -2%;
+     width: 505px;
+  }
+
+  .main-page .container .row .col-6 {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .aboutUsMain__ellipse {
+    top: -57%;
+    right: 7%;
+  }
+
+  .feedbacks__button {
+    display: block;
+  }
+
+}

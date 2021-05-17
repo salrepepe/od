@@ -14,14 +14,13 @@
 
   &__button {
     position: absolute;
-    top: 50%;
-    right: 2%;
+    top: 45%;
+    right: 4%;
     transition: 0.2s all linear;
     &:hover {
       transform: scale(1.1);
     }
   }
-
 
   .slick-dots {
     display: block;

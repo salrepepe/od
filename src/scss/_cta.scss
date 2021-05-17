@@ -10,48 +10,48 @@
     max-width: 480px;
     margin-bottom: 40px;
   }
+}
 
-  .form {
-    position: relative;
+.form {
+  position: relative;
 
-    &__inputBlock {
-      margin-bottom: 24px;
+  &__inputBlock {
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    width: 480px;
+    height: 46px;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    background: transparent;
+    color: #FFFFFF;
+    outline: none;
+    padding:10px;
+    transition: ease all 0.3s ;
+    
+    &:valid:focus{
+      border: 1px solid #5699E8;
     }
+  }
 
-    &__input {
-      width: 480px;
-      height: 46px;
-      border: 1px solid #FFFFFF;
-      border-radius: 6px;
-      background: transparent;
-      color: #FFFFFF;
-      outline: none;
-      padding:10px;
-      transition: ease all 0.3s ;
-      
-      &:valid:focus{
-        border: 1px solid #5699E8;
-      }
-    }
-  
 
-    .input__title {
-      @include txt(16px, normal);
-      margin-bottom: 12px;
-    }
+  .input__title {
+    @include txt(16px, normal);
+    margin-bottom: 12px;
+  }
 
-    &__button {
-      width: 156px;
-      height: 46px;
-      background: #F91941;
-      box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.25);
-      border-radius: 45px;
-      border: none;
-      @include txt(16px, normal);
-      position: absolute;
-      bottom: -80px;
-      left: 326px;
+  &__button {
+    width: 156px;
+    height: 46px;
+    background: #F91941;
+    box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.25);
+    border-radius: 45px;
+    border: none;
+    @include txt(16px, normal);
+    position: absolute;
+    bottom: -80px;
+    left: 326px;
 
-    }
   }
 }

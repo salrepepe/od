@@ -2,6 +2,36 @@
   padding:120px 0  135px;
   position: relative;
   background: #1f242c;
+
+  &__vector {
+    position: absolute;
+    top: 0;
+    left: 412px;
+    animation: blink .8s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: .8;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: .8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .titleBlock {
+    position: relative;
+  }
+
   &__title {
     position: relative;
     &:before {
@@ -53,9 +83,10 @@
     right: 2%;
     z-index: 2;
 
-    &.second {
-      top: 18%;
+    &.aboutUs {
+      top: 14%;
     }
+    
   }
 
   &__ellipse {
@@ -66,6 +97,11 @@
     height: 856px;
     background: #2a2f37;
     border-radius: 100%;
+    animation: ellipse 3s infinite  linear;
+    &.aboutUs {
+      top: 17%;
+      right: -11%;
+    }
   }
 
   @keyframes ellipse {
@@ -73,13 +109,13 @@
       transform:scale(1)
     }
     25% {
-      transform:scale(1.1)
+      transform:scale(.9)
     }
     50% {
-      transform:scale(1.2)
+      transform:scale(.8)
     }
     75% {
-      transform:scale(1.1)
+      transform:scale(.9)
     }
     100% {
       transform:scale(1)

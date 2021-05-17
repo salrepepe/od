@@ -11,19 +11,19 @@ const Footer = () => {
     <footer className="footer" id="footer">
       <div className="container">
         <div className="row">
-           <div className="col-3">
+           <a href="#home" className="col-sm-12 col-md-12 col-lg-3 col-xl-3">
              <img src={logo} alt="logo" />
              <div className="logo-line"></div>
              <p className="footer__txt">Мы находим решения</p>
-           </div>
-           <div className="col-3 d-flex flex-column">
+           </a>
+           <div className="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex flex-column">
              <a href="#home" className="footer__txt">Главная</a>
              <a href="#aboutUs" className="footer__txt">О компании</a>
              <a href="#cost-desc" className="footer__txt">Услуги</a>
              <a href="#works" className="footer__txt">Наши работы</a>
              <a href="#cta" className="footer__txt">Оставить заявку</a>
            </div>
-           <div className="col-3 d-flex flex-column">
+           <div className="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex flex-column">
              <a href="https://www.instagram.com/odigital.dev/" target="_blank" className="footer__txt d-flex">
                <img src={instagram} alt="instagram"/>
                <p className="txtIcon"></p>
@@ -33,7 +33,7 @@ const Footer = () => {
                <p className="txtIcon">facebook</p>
                </a>
            </div>
-           <div className="col-3 d-flex flex-column">
+           <div className="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex flex-column">
             <a href="tel:+996709683738" className=" footer__txt d-flex">
               <img src={icon2}/>
               <p className="txtIcon">+996 709 683 738</p>
@@ -51,7 +51,7 @@ const Footer = () => {
            </div>
         </div>
         <div className="footer__line"></div>
-        <p className="footer__txt last">Все права защищены</p>
+        <p className="footer__txt last">Все права защищены | 2021 | Oracle Digital</p>
       </div>
     </footer>
   );
