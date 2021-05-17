@@ -2,7 +2,7 @@
   padding: 80px 0 40px;
 
   &__txt {
-    @include txt(16px, normal);
+    @include txt(1rem, normal);
     margin-bottom: 40px;
     text-decoration: none;
     transition: all 0.3s linear;

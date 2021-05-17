@@ -22,6 +22,12 @@
     }
   }
 
+  .slick-slide img {
+    display: block;
+    width: 100%;
+    height: 90vh;
+  }
+
   .slick-dots {
     display: block;
     position: absolute;

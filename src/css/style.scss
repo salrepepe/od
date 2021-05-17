@@ -14,7 +14,7 @@
 @import '../scss/cta';
 @import '../scss/footer';
 @import '../scss/aboutUs';
-@import '../scss/popup';
+@import '../scss/popups';
 
 * {
   padding: 0;
@@ -114,9 +114,11 @@ body {
     font-size: 20px;
   }
 
-  .slick-slide img {
+  .works .slick-slide img {
     display: block;
     width: 100%;
+    height: 72vh;
+    object-fit: cover;
   }
 
   .feedbacks .cards {
@@ -137,6 +139,35 @@ body {
 
   .aboutUs .main-page {
     padding: 241px 0 163px;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+
+  .home__ellipse {
+    right: -13%;
+  }
+
+  .aboutUsMain__ellipse {
+    right: -3%;
+  }
+
+  .home__img {
+    position: absolute;
+    top: 20%;
+  }
+  
+  .works .slick-slide img {
+    height: 42vh;
+  }
+
+  .feedbacks .cards {
+    transform: scale(0.4);
+  }
+
+  .feedbacks .cards_active {
+    transform: scale(0.7)
   }
   
 }
@@ -244,7 +275,7 @@ body {
         display: none;       
       }
       .nav-item {
-        font-size: 33px;
+        font-size: 1.5rem;
         line-height: unset;
         color: #fff;
         transition: all .3s linear;
@@ -294,7 +325,7 @@ body {
 
       &_active {
         transform: rotate(45deg);
-        margin: 0;
+        margin: -3px;
         &:nth-child(2) {
           transition: all 0.3s linear;
           display: none;
@@ -302,6 +333,7 @@ body {
         &:last-child {
           transform: rotate(-45deg);
         }
+        
       }
     }
   }
@@ -309,7 +341,7 @@ body {
 
 
   .home {
-    padding-bottom: 886px;
+    padding-bottom: 454px;
   }
 
   .home__ellipse {
@@ -317,7 +349,7 @@ body {
   }
 
   .aboutUsMain__ellipse {
-    top: -56%;
+    top: -36%;
     right: 2%;
   }
 
@@ -327,15 +359,17 @@ body {
     width: 560px;
   }
 
+  .works .slick-slide img {
+    display: block;
+    width: 100%;
+    height: 52vh;
+  }
+
   .works__cards {
     top: 14%;
     left: 5%;
   }
 
-  .slick-slide img {
-    height: 50vh;
-    object-fit: cover;
-  }
 
   .works__button {
     top: 49%;
@@ -350,15 +384,9 @@ body {
     transform: scale(0.6);
   }
 
-  // .slick-current div {
-  //   &:first-of-type{
-  //     display: flex;
-  //     justify-content: center;
-  //   }
-  // }
-
-  .feedbacks__button {
-    display: none;
+  div .slick-slide.slick-active {
+    display: flex;
+    justify-content: center;
   }
 
   .footer .container .row .col-sm-12 {
@@ -405,12 +433,50 @@ body {
   .main-page .container .row .col-6 {
     width: 95%;
   }
+
+  .footer__line {
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin: 4px 0 24px;
+  }
 }
 
 @media (max-width: 576px) {
 
+  html {
+
+    h2 {
+      text-align: center;
+    }
+
+    .aboutUsMain__subtitle {
+      text-align: center;
+    }
+
+    .aboutUsMain__descr {
+      text-align: center;
+    }
+
+    .home__subtitle {
+      text-align: unset;
+    }
+
+    .works__title {
+      text-align: unset;
+    }
+
+    .feedbacks__title {
+      text-align:unset;
+    }
+  }
+
+  .home {
+    padding-bottom: 647px;
+  }
+
   .aboutUsMain__ellipse {
-    top: -57%;
+    top: -45%;
     right: 7%;
   }
 
@@ -418,4 +484,113 @@ body {
     display: block;
   }
 
+  .footer .container .row .col-sm-12 {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+
+  .home {
+    padding-bottom: 400px;
+  }
+
+  .home__title img {
+    width: 150%;
+    object-fit: cover;
+  }
+  
+  .home__vector {
+    top: -2px;
+    left: 265px;
+    width: 9px;
+  }
+
+  .home__descr {
+    font-size: 1rem;
+  }
+
+  .home__button {
+    width: 95%;
+    font-size: 1rem;
+  }
+
+  .home__ellipse {
+    top: 63%;
+    right: -47%;
+  }
+
+  .aboutUsMain__ellipse {
+    top: -27%;
+    right: -21%;
+  }
+
+  .home__img {
+    top: 65%;
+    right: -22px;
+    width: 401px;
+    height: 34%;
+  }
+
+  .home__ellipse {
+    top: 57%;
+    right: -47%;
+  }
+
+  .works__cards {
+    display: none;
+  }
+
+  .works .slick-slide img {
+    display: block;
+    width: 100%;
+    height: 26vh;
+  }
+
+  .works__button {
+    top: 35%;
+    width: 13%;
+  }
+
+  .works .slick-dots {
+    bottom: 11px;
+  }
+
+  .works .slick-dots li button:before {
+    font-size: 16px;
+  }
+
+  .feedbacks__button {
+    right: 0;
+    width: 13%;
+  }
+
+  div .slick-slide.slick-active {
+    display: block;
+  }
+
+  .feedbacks .cards_active {
+    transform: scale(0.5);
+  }
+
+  .feedbacks .slick-dots li button:before {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .home {
+    padding-bottom: 460px;
+  }
+
+  .home__subtitle {
+    font-size: 1.3rem;
+  }
+
+  .feedbacks .cards {
+    transform: scale(0.2);
+  }
+  .feedbacks .cards_active {
+    transform: scale(0.4);
+  }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { popupThanksToggle, burgerMenuToggle } from '../../redux/reducers/funcReducer'
+import { popupThanksToggle, burgerMenuToggle, popupSoonToggle} from '../../redux/reducers/funcReducer'
 import logo from '../../images/header/logo.svg';
 import facebook from '../../images/header/facebook.svg';
 import instagram from '../../images/header/instagram.svg';
@@ -11,11 +11,11 @@ import icon2 from '../../images/footer/icon2.svg';
 import icon3 from '../../images/footer/icon3.svg';
 
 const AboutUs = () => {
-
   const dispatch = useDispatch()
 
   const burgerMenu = useSelector((s) => s.funcReducer.isBurgerMenuActive);
   const popupThanks = useSelector((s) => s.funcReducer.isPopupThanksActive);
+  const popupSoon = useSelector((s) => s.funcReducer.isPopupSoonActive);
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -24,6 +24,10 @@ const AboutUs = () => {
 
   const setBurgerMenuActive = () => {
     dispatch(burgerMenuToggle(!burgerMenu))
+  }
+
+  const buttonHandler = () => {
+    dispatch(popupSoonToggle(!popupSoon))
   }
 
   return (
@@ -135,7 +139,7 @@ const AboutUs = () => {
             </ul>
           </div>
         </div>
-        <button className="dev-process__button">Увидеть примеры работ</button>
+        <button type="button"  onClick={buttonHandler} className="dev-process__button">Увидеть примеры работ</button>
       </div>
     </div>
     <div className="cta" id="cta">
@@ -205,7 +209,7 @@ const AboutUs = () => {
            </div>
         </div>
         <div className="footer__line"></div>
-        <p className="footer__txt last">Все права защищены</p>
+        <p className="footer__txt last">Все права защищены | 2021 | Oracle Digital</p>
       </div>
     </div>
 

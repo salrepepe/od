@@ -14,7 +14,7 @@
     font-family: Segoe UI;
     font-style: normal;
     font-weight: bold;
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 96px;
     color: #E5E5E5;
     opacity: 0.4;
@@ -23,7 +23,7 @@
 
   &__cards {
     @include cards(346px, 152px, 12px);
-    @include txt(24px, 300);
+    @include txt(1.5rem, 300);
     margin-bottom: 40px;
   }
 }

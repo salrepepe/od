@@ -1,11 +1,13 @@
 const POPUP_FORM = "POPUP_FORM";
 const POPUP_THANKS = "POPUP_THANKS"
 const BURGERMENU = "BURGERMENU"
+const POPUP_SOON = "POPUP_SOON"
 
 const initState = {
   isPopupFormActive: false,
   isPopupThanksActive: false,
   isBurgerMenuActive: false,
+  isPopupSoonActive: false,
 }
 
 
@@ -21,6 +23,10 @@ export default (state = initState, action) => {
 
     case BURGERMENU: {
       return {...state, isBurgerMenuActive: action.isBurgerMenuActive}
+    }
+
+    case POPUP_SOON: {
+      return {...state, isPopupSoonActive: action.isPopupSoonActive}
     }
 
     default: {
@@ -47,6 +53,13 @@ export const burgerMenuToggle = (bool) => {
   return {
     type:BURGERMENU,
     isBurgerMenuActive: bool
+  }
+}
+
+export const popupSoonToggle = (bool) => {
+  return {
+    type: POPUP_SOON,
+    isPopupSoonActive: bool
   }
 }
 

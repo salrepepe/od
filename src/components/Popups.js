@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import InputMask from 'react-input-mask';
 import { useSelector, useDispatch } from "react-redux";
-import { popupFormToggle, popupThanksToggle } from '../redux/reducers/funcReducer'
+import { popupFormToggle, popupThanksToggle, popupSoonToggle } from '../redux/reducers/funcReducer'
 
 
 const Popups = () => {
@@ -10,6 +10,7 @@ const Popups = () => {
   
   const popupForm = useSelector((s) => s.funcReducer.isPopupFormActive);
   const popupThanks = useSelector((s) => s.funcReducer.isPopupThanksActive);
+  const popupSoon = useSelector((s) => s.funcReducer.isPopupSoonActive);
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -25,10 +26,14 @@ const Popups = () => {
       dispatch(popupThanksToggle(!popupThanks));
     }
 
+    const PopupSoonToggle  = () => {
+      dispatch(popupSoonToggle(!popupSoon));
+    }
+
 
 
   return (
-    <div className={popupForm || popupThanks ? 'overlay overlay_active' : 'overlay'}>
+    <div className={popupForm || popupThanks || popupSoon ? 'overlay overlay_active' : 'overlay'}>
       <div className={popupForm ? 'popup-form popup-form_active' : 'popup-form'}>
         <div className="closeButton" onClick={PopupFormToggle}>
           <div className="line"></div>
@@ -59,6 +64,13 @@ const Popups = () => {
           <div className="line"></div>
         </div>
         <h4 className="popup-thanks__txt">Спасибо за обращение. Наши менеджеры вскоре свяжутся с вами</h4>
+      </div>
+      <div className={popupSoon ? 'popup-soon popup-soon_active' : 'popup-soon'}>
+        <div className="closeButton soonPopup" onClick={PopupSoonToggle}>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <h4 className="popup-thanks__txt">совсем скоро : )</h4>
       </div>
     </div>
   );

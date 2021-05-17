@@ -20,15 +20,15 @@ const AboutUsMain = () => {
         <h2 className="aboutUsMain__title">Мы не просто создаем сайты - мы решаем задачи вашего бизнеса</h2>
         <h3 className="aboutUsMain__subtitle">Наши проекты решают ряд бизнес-задач:</h3>
         <div class="row justify-content-center">
-          <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex ">
+          <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
             <p className="aboutUsMain__numbers">1</p>
             <div className="aboutUsMain__cards">Презентация бизнеса на самом высоком уровне.</div>
           </div>
-          <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex ">     
+          <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">     
           <p className="aboutUsMain__numbers">2</p>     
             <div className="aboutUsMain__cards">Позиционирование бренда, создание имиджа компании и выделение среди конкурентов.</div>
           </div>
-          <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex ">
+          <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-4 d-flex  justify-content-center">
           <p className="aboutUsMain__numbers">3</p>
             <div className="aboutUsMain__cards">Повышение лояльности клиентов и соответственно - продаж.</div>
           </div>

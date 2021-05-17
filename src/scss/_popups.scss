@@ -25,6 +25,11 @@
     height: 30px;
     position: absolute;
     z-index: 2;
+    //  &.soonPopup {
+    //    top: 0;
+    //    right: 0;
+
+    //  }
     .line {
       width: 29px;
       height: 2px;
@@ -80,4 +85,21 @@
       display: block;
     }
   }
+
+  .popup-soon {
+      position: relative;
+      display: none;
+      max-width: 600px;
+      max-height: 600px;
+      background: #2a2f37;
+      border-radius: 12px;
+      padding: 20px;
+      height: 100px;
+      width: 300px;
+      &_active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 }
