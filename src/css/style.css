@@ -1,5 +1,6 @@
 @import url("../fonts/SegoeUI/stylesheet.css");
 @import url("../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css");
+@import url("../../node_modules/bootstrap/dist/css/bootstrap.min.css");
 @import url(../../node_modules/slick-carousel/slick/slick.css);
 @import url(../../node_modules/slick-carousel/slick/slick-theme.css);
 .header {
@@ -198,7 +199,7 @@
 }
 
 .home__ellipse.aboutUs {
-  top: 17%;
+  top: 13%;
   right: -11%;
 }
 
@@ -616,6 +617,23 @@
   border: none;
 }
 
+.feedbacks .cards:nth-child(2) {
+  -webkit-transform: scale(0.8) !important;
+          transform: scale(0.8) !important;
+  border: 1px solid #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feedbacks .cards:nth-child(2):before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+}
+
 .feedbacks .cards:before {
   content: '';
   width: 100%;
@@ -624,23 +642,6 @@
   top: 0;
   left: 0;
   background: rgba(31, 36, 43, 0.6);
-}
-
-.feedbacks .cards_active {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  border: 1px solid #FFFFFF;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.feedbacks .cards_active:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: none;
 }
 
 .feedbacks .cards__img {
@@ -1622,6 +1623,26 @@ body {
   .feedbacks .slick-dots li button:before {
     font-size: 18px;
   }
+  .home__ellipse.aboutUs {
+    top: 100%;
+    right: -39%;
+  }
+  .aboutUsMain__ellipse.aboutUs {
+    top: -12%;
+    right: -16%;
+  }
+  .home__img.aboutUs {
+    top: 117%;
+    right: -7%;
+    width: 375px;
+    height: 45%;
+  }
+  .aboutUs .dev-process .row .col-sm-12 {
+    width: 364px;
+  }
+  .aboutUs .dev-process .row .col-sm-12 .list-items {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1638,6 +1659,20 @@ body {
   .feedbacks .cards_active {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+  }
+  .aboutUs .main-page {
+    padding: 241px 0 500px;
+  }
+  .home__ellipse.aboutUs {
+    top: 82%;
+    right: -58%;
+  }
+  .aboutUsMain__ellipse.aboutUs {
+    top: -12%;
+    right: -34%;
+  }
+  .home__img.aboutUs {
+    top: 104%;
   }
 }
 /*# sourceMappingURL=style.css.map */
