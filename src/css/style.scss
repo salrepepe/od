@@ -1,5 +1,6 @@
 @import url('../fonts/SegoeUI/stylesheet.css');
 @import url('../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css');
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.min.css');
 @import url(../../node_modules/slick-carousel/slick/slick.css);
 @import url(../../node_modules/slick-carousel/slick/slick-theme.css);
 
@@ -572,6 +573,32 @@ body {
   .feedbacks .slick-dots li button:before {
     font-size: 18px;
   }
+
+  .home__ellipse.aboutUs {
+    top: 100%;
+    right: -39%;
+  }
+
+  .aboutUsMain__ellipse.aboutUs {
+    top: -12%;
+    right: -16%;
+  }
+
+  .home__img.aboutUs {
+    top: 117%;
+    right: -7%;
+    width: 375px;
+    height: 45%;
+  }
+
+  .aboutUs .dev-process .row .col-sm-12 {
+    width: 364px;
+  }
+
+  .aboutUs .dev-process .row .col-sm-12 .list-items {
+    font-size: 12px;
+  }
+
 }
 
 @media (max-width: 375px) {
@@ -588,5 +615,23 @@ body {
   }
   .feedbacks .cards_active {
     transform: scale(0.4);
+  }
+
+  .aboutUs .main-page {
+    padding: 241px 0 500px;
+  }
+
+  .home__ellipse.aboutUs {
+    top: 82%;
+    right: -58%;
+  }
+
+  .aboutUsMain__ellipse.aboutUs {
+    top: -12%;
+    right: -34%;
+  }
+
+  .home__img.aboutUs {
+    top: 104%;
   }
 }
