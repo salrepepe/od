@@ -186,7 +186,7 @@ const AboutUs = () => {
           </div>
           <div className="form__inputBlock">
             <h4 className="input__title">Номер телефона</h4>
-            <InputMask className="form__input" required placeholder="+996"mask="+\9\96(999) 99-99-99"/>;
+            <InputMask className="form__input" required placeholder="+996"mask="+\9\96(999) 99-99-99"/>
           </div>
           <div className="form__inputBlock">
             <h4 className="input__title">По какой услуге вы хотите получить консультацию?</h4>
