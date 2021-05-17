@@ -1246,7 +1246,7 @@ body {
   .nav {
     display: none;
     z-index: 9;
-    background: #2a2f3780;
+    background: #2a2f3790;
     -webkit-transition: all .6s linear;
     transition: all .6s linear;
   }
