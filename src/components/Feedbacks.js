@@ -91,7 +91,6 @@ const Feedbacks = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setCardsIndex(next),
-    focusOnSelect: true,
     responsive: [
       {
         breakpoint: 1024,

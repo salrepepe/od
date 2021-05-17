@@ -37,7 +37,7 @@ const Works = () => {
             Это молодая динамично развивающаяся компания, что и нужно было показать на их сайте.<br/><br/>
             Проанализировав рынок и конкурентов, мы поняли, что нужно сделать для того, чтобы выгодно выделить Oracle...
               </p>
-              <a href="#" className="works__link">Прочитать все</a>
+              <a href="https://www.facebook.com/oracledigital.kg" className="works__link">Прочитать все</a>
             </div>
          </div>
          <div className="works__slide">
@@ -48,7 +48,7 @@ const Works = () => {
             Это молодая динамично развивающаяся компания, что и нужно было показать на их сайте.<br/><br/>
             Проанализировав рынок и конкурентов, мы поняли, что нужно сделать для того, чтобы выгодно выделить Oracle...
               </p>
-              <a href="#" className="works__link">Прочитать все</a>
+              <a href="https://www.facebook.com/oracledigital.kg" className="works__link">Прочитать все</a>
             </div>
          </div>
          <div className="works__slide">
@@ -59,7 +59,7 @@ const Works = () => {
             Это молодая динамично развивающаяся компания, что и нужно было показать на их сайте.<br/><br/>
             Проанализировав рынок и конкурентов, мы поняли, что нужно сделать для того, чтобы выгодно выделить Oracle...
               </p>
-              <a href="#" className="works__link">Прочитать все</a>
+              <a href="https://www.facebook.com/oracledigital.kg" className="works__link">Прочитать все</a>
             </div>
          </div>
         </Slider>

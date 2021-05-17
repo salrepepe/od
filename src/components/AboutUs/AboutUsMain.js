@@ -1,18 +1,6 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import {popupFormToggle} from '../../redux/reducers/funcReducer'
-import message from '../../images/aboutUs/message.svg'
+import React from 'react';
 
 const AboutUsMain = () => {
-
-  const popupForm = useSelector((s) => s.funcReducer.isPopupFormActive);
-
-  const dispatch = useDispatch();
-
-  const buttonHandler = () => {
-    dispatch(popupFormToggle(!popupForm));
-  };
-
   return (
     <section className="aboutUsMain" id="aboutUs">
       <div className="aboutUsMain__ellipse"></div>
@@ -37,7 +25,6 @@ const AboutUsMain = () => {
         <div className="ellipsis-block">
           <div className="ellipsis-block__ellipsis"></div>
           <div className="ellipsis-block__ellipsis"></div>
-          <button type="button" onClick={buttonHandler} className="aboutUsMain__button"><img src={message} alt="message" /></button>
         </div>
       </div>
     </section>

@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
 import { useSelector, useDispatch } from "react-redux";
-import { popupFormToggle, popupThanksToggle, popupSoonToggle } from '../redux/reducers/funcReducer'
+import { popupFormToggle, popupThanksToggle, popupSoonToggle, dropdownToggle } from '../redux/reducers/funcReducer'
 
 
 const Popups = () => {
+
+  const [dropDown, setDropDown] = useState('')
 
   const dispatch = useDispatch();
   
   const popupForm = useSelector((s) => s.funcReducer.isPopupFormActive);
   const popupThanks = useSelector((s) => s.funcReducer.isPopupThanksActive);
   const popupSoon = useSelector((s) => s.funcReducer.isPopupSoonActive);
+  const dropdown = useSelector((s) => s.funcReducer.isDropdownActive);
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -30,7 +33,19 @@ const Popups = () => {
       dispatch(popupSoonToggle(!popupSoon));
     }
 
-
+    const dropdownHandler = (e) => {
+      setDropDown(e.target.value)
+      dispatch(dropdownToggle(!dropdown))
+    };
+  
+    const dropdownItem = [
+      <button type="button" value='Сайт хочется' onClick={dropdownHandler} className="dropdown">Сайт хочется</button>,
+      <button type="button" value='Приложение хочется' onClick={dropdownHandler} className="dropdown">Приложение хочется</button>
+    ]
+  
+    const dropDownToggle = () => {
+      dispatch(dropdownToggle(!dropdown))
+    };
 
   return (
     <div className={popupForm || popupThanks || popupSoon ? 'overlay overlay_active' : 'overlay'}>
@@ -49,12 +64,14 @@ const Popups = () => {
               <InputMask className="form__input" required placeholder="+996"mask="+\9\96(999) 99-99-99"/>;
             </div>
             <div className="form__inputBlock">
-              <h4 className="input__title">По какой услуге вы хотите получить консультацию?</h4>
-              <select className="form__input">
-                <option className="dropdown">Сайт хочу</option>
-                <option className="dropdown">Приложение хочу</option>
-              </select>
+            <h4 className="input__title">По какой услуге вы хотите получить консультацию?</h4>
+            <input className="form__input dropdown" value={dropDown} placeholder="Сайт хочется" 
+            onClick={dropDownToggle} type="dropdown" required/>
+            <div className={dropdown ? 'dropdownBlock dropdownBlock_active' : 'dropdownBlock'}>
+              {dropdownItem[0]}
+              {dropdownItem[1]}
             </div>
+          </div>
             <button type="submit" className="form__button">Отправить</button>
           </form>
       </div>

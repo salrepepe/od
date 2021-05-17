@@ -17,6 +17,32 @@
 
   &__inputBlock {
     margin-bottom: 24px;
+
+    .dropdownBlock {
+      display: none;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+
+      &_active {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .dropdown {
+        width: 100%;
+        height: 46px;
+        background: #353940;
+        border-radius: 6px;
+        border-bottom: 1px solid #fff;
+        @include txt(16px, 300);
+        padding: 10px;
+        // &:last-child{
+        //   border: none;
+        // }
+      }
+    }
   }
 
   &__input {
@@ -29,6 +55,12 @@
     outline: none;
     padding:10px;
     transition: ease all 0.3s ;
+
+    &.dropdown {
+      transition: all 0.5s linear;
+      background:no-repeat 470px/10px url('../images/cta/arrow.svg');
+      background-size: 22px;
+    }
     
     &:valid:focus{
       border: 1px solid #5699E8;

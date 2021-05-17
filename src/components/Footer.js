@@ -24,28 +24,28 @@ const Footer = () => {
              <a href="#cta" className="footer__txt">Оставить заявку</a>
            </div>
            <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex flex-column">
-             <a href="https://www.instagram.com/odigital.dev/" target="_blank" className="footer__txt d-flex">
+             <a href="https://www.instagram.com/odigital.dev/"rel="noreferrer"  target="_blank" className="footer__txt d-flex">
                <img src={instagram} alt="instagram"/>
                <p className="txtIcon"></p>
                instagram</a>
-             <a href="https://www.facebook.com/oracledigital.kg" target="_blank" className="footer__txt d-flex">
+             <a href="https://www.facebook.com/oracledigital.kg" rel="noreferrer" target="_blank" className="footer__txt d-flex">
                <img src={facebook} alt="facebook"/>
                <p className="txtIcon">facebook</p>
                </a>
            </div>
            <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex flex-column">
             <a href="tel:+996709683738" className=" footer__txt d-flex">
-              <img src={icon2}/>
+              <img src={icon2} alt="kek"/>
               <p className="txtIcon">+996 709 683 738</p>
               </a>
             <a href="tel:+996557978715" className="footer__txt d-flex">
-              <img src={icon2}/>
+              <img src={icon2} alt="kek"/>
               <p className="txtIcon">+996 557 978 715</p></a>
             <a href="mailto:contact@odigital.dev" className="footer__txt d-flex">
-              <img src={icon1}/>
+              <img src={icon1} alt="kek"/>
               <p className="txtIcon">contact@odigital.dev</p></a>
             <a href="https://go.2gis.com/7freqb" className="footer__txt d-flex">
-              <img src={icon3}/>
+              <img src={icon3} alt="kek"/>
               <p className="txtIcon">Кыргызстан, Бишкек, ул. Тимирязева 80</p>
             </a>
            </div>

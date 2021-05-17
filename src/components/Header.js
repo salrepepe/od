@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { burgerMenuToggle } from '../redux/reducers/funcReducer'
+import { burgerMenuToggle, popupFormToggle } from '../redux/reducers/funcReducer'
 import logo from '../images/header/logo.svg';
 import facebook from '../images/header/facebook.svg';
 import instagram from '../images/header/instagram.svg';
+import message from '../images/aboutUs/message.svg'
 
 const Header = () => {
 
+  const [sticky, setSticky] = useState(false);
+
   const burgerMenu = useSelector((s) => s.funcReducer.isBurgerMenuActive);
+  const popupForm = useSelector((s) => s.funcReducer.isPopupFormActive);
 
   const dispatch = useDispatch();
 
@@ -16,7 +20,9 @@ const Header = () => {
     dispatch(burgerMenuToggle(!burgerMenu))
   }
 
-  const [sticky, setSticky] = useState(false);
+  const buttonHandler = () => {
+    dispatch(popupFormToggle(!popupForm));
+  };
 
   const changeBackground = () => {
     if (window.scrollY > 0) {
@@ -41,14 +47,17 @@ const Header = () => {
           </div>
         </nav>
         <div> 
-          <a href="https://www.instagram.com/odigital.dev/" target="_blank"><img src={instagram} className=" header__img" alt="instagram" /></a>
-          <a href="https://www.facebook.com/oracledigital.kg" target="_blank"><img src={facebook} className=" header__img" alt="facebook" /></a>
+          <a href="https://www.instagram.com/odigital.dev/" rel="noreferrer" target="_blank"><img src={instagram} className=" header__img" alt="instagram" /></a>
+          <a href="https://www.facebook.com/oracledigital.kg" rel="noreferrer" target="_blank"><img src={facebook} className=" header__img" alt="facebook" /></a>
         </div>
         <div className={burgerMenu ? 'burger-menu burger-menu_active' : 'burger-menu'} onClick={setBurgerMenuActive}>
           <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
           <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
           <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
         </div>
+        <button type="button" onClick={buttonHandler} 
+          className={sticky ? 'aboutUsMain__button aboutUsMain__button_active' : 'aboutUsMain__button'}>
+            <img src={message} alt="message" /></button>
       </div>
     </header>
   );

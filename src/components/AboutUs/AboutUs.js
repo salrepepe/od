@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { popupThanksToggle, burgerMenuToggle, popupSoonToggle} from '../../redux/reducers/funcReducer'
+import InputMask from 'react-input-mask';
+import { popupThanksToggle, burgerMenuToggle, popupSoonToggle, dropdownToggle} from '../../redux/reducers/funcReducer';
 import logo from '../../images/header/logo.svg';
 import facebook from '../../images/header/facebook.svg';
 import instagram from '../../images/header/instagram.svg';
@@ -9,13 +10,18 @@ import notebook from '../../images/home/notebook.svg';
 import icon1 from '../../images/footer/icon.svg';
 import icon2 from '../../images/footer/icon2.svg';
 import icon3 from '../../images/footer/icon3.svg';
+import message from '../../images/aboutUs/message.svg'
 
 const AboutUs = () => {
+  const [sticky, setSticky] = useState(false);
+  const [dropDown, setDropDown] = useState('')
+
   const dispatch = useDispatch()
 
   const burgerMenu = useSelector((s) => s.funcReducer.isBurgerMenuActive);
   const popupThanks = useSelector((s) => s.funcReducer.isPopupThanksActive);
   const popupSoon = useSelector((s) => s.funcReducer.isPopupSoonActive);
+  const dropdown = useSelector((s) => s.funcReducer.isDropdownActive);
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -29,6 +35,30 @@ const AboutUs = () => {
   const buttonHandler = () => {
     dispatch(popupSoonToggle(!popupSoon))
   }
+
+  const dropdownHandler = (e) => {
+    setDropDown(e.target.value)
+    dispatch(dropdownToggle(!dropdown))
+  };
+
+  const dropdownItem = [
+    <button type="button" value='Сайт хочется' onClick={dropdownHandler} className="dropdown">Сайт хочется</button>,
+    <button type="button" value='Приложение хочется' onClick={dropdownHandler} className="dropdown">Приложение хочется</button>
+  ]
+
+  const dropDownToggle = () => {
+    dispatch(dropdownToggle(!dropdown))
+  };
+
+  const changeBackground = () => {
+    if (window.scrollY > 0) {
+      setSticky(true)
+    }
+    else {
+      setSticky(false)
+    }
+  }
+  window.addEventListener('scroll', changeBackground)
 
   return (
     <div className="aboutUs">
@@ -44,14 +74,17 @@ const AboutUs = () => {
             </div>
           </nav>
           <div> 
-            <a href="https://www.instagram.com/odigital.dev/" target="_blank"><img src={instagram} className=" header__img" alt="instagram" /></a>
-            <a href="https://www.facebook.com/oracledigital.kg" target="_blank"><img src={facebook} className=" header__img" alt="facebook" /></a>
+            <a href="https://www.instagram.com/odigital.dev/" rel="noreferrer" target="_blank"><img src={instagram} className=" header__img" alt="instagram" /></a>
+            <a href="https://www.facebook.com/oracledigital.kg" rel="noreferrer" target="_blank"><img src={facebook} className=" header__img" alt="facebook" /></a>
           </div>
           <div className={burgerMenu ? 'burger-menu burger-menu_active' : 'burger-menu'} onClick={setBurgerMenuActive}>
             <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
             <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
             <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
-        </div>
+          </div>
+          <button type="button" onClick={buttonHandler} 
+          className={sticky ? 'aboutUsMain__button aboutUsMain__button_active' : 'aboutUsMain__button'}>
+            <img src={message} alt="message" /></button>
         </div>
       </header>
       <div className="main-page" id="main-page">
@@ -149,18 +182,20 @@ const AboutUs = () => {
           <form action=""  onSubmit={formHandler} className="form">
           <div className="form__inputBlock">
             <h4 className="input__title">ФИО</h4>
-            <input type="text" className="form__input" required />
+            <input type="text" className="form__input" placeholder="Зубенко Михаил Петрович" required />
           </div>
           <div className="form__inputBlock">
             <h4 className="input__title">Номер телефона</h4>
-            <input type="text" className="form__input" required />
+            <InputMask className="form__input" required placeholder="+996"mask="+\9\96(999) 99-99-99"/>;
           </div>
           <div className="form__inputBlock">
             <h4 className="input__title">По какой услуге вы хотите получить консультацию?</h4>
-            <select className="form__input">
-              <option className="dropdown">Сайт хочу</option>
-              <option className="dropdown">Приложение хочу</option>
-            </select>
+            <input className="form__input dropdown" value={dropDown} placeholder="Сайт хочется"
+            onClick={dropDownToggle} type="dropdown"  required/>
+            <div className={dropdown ? 'dropdownBlock dropdownBlock_active' : 'dropdownBlock'}>
+              {dropdownItem[0]}
+              {dropdownItem[1]}
+            </div>
           </div>
           <button type="submit" className="form__button">Отправить</button>
           </form>
@@ -182,28 +217,28 @@ const AboutUs = () => {
              <a href="#cta" className="footer__txt">Оставить заявку</a>
            </div>
            <div className="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex flex-column">
-             <a href="https://www.instagram.com/odigital.dev/" target="_blank" className="footer__txt d-flex">
+             <a href="https://www.instagram.com/odigital.dev/" rel="noreferrer" target="_blank" className="footer__txt d-flex">
                <img src={instagram} alt="instagram"/>
                <p className="txtIcon"></p>
                instagram</a>
-             <a href="https://www.facebook.com/oracledigital.kg" target="_blank" className="footer__txt d-flex">
+             <a href="https://www.facebook.com/oracledigital.kg" rel="noreferrer" target="_blank" className="footer__txt d-flex">
                <img src={facebook} alt="facebook"/>
                <p className="txtIcon">facebook</p>
                </a>
            </div>
            <div className="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex flex-column">
             <a href="tel:+996709683738" className=" footer__txt d-flex">
-              <img src={icon2}/>
+              <img src={icon2} alt="kek"/>
               <p className="txtIcon">+996 709 683 738</p>
               </a>
             <a href="tel:+996557978715" className="footer__txt d-flex">
-              <img src={icon2}/>
+              <img src={icon2} alt="kek"/>
               <p className="txtIcon">+996 557 978 715</p></a>
             <a href="mailto:contact@odigital.dev" className="footer__txt d-flex">
-              <img src={icon1}/>
+              <img src={icon1} alt="kek"/>
               <p className="txtIcon">contact@odigital.dev</p></a>
             <a href="https://go.2gis.com/7freqb" className="footer__txt d-flex">
-              <img src={icon3}/>
+              <img src={icon3} alt="kek"/>
               <p className="txtIcon">Кыргызстан, Бишкек, ул. Тимирязева 80</p>
             </a>
            </div>
