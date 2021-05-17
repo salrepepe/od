@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import InputMask from 'react-input-mask';
-import { popupThanksToggle, burgerMenuToggle, popupSoonToggle, dropdownToggle} from '../../redux/reducers/funcReducer';
+import { popupThanksToggle, burgerMenuToggle, popupSoonToggle, dropdownToggle, popupFormToggle} from '../../redux/reducers/funcReducer';
 import logo from '../../images/header/logo.svg';
 import facebook from '../../images/header/facebook.svg';
 import instagram from '../../images/header/instagram.svg';
@@ -19,6 +19,7 @@ const AboutUs = () => {
   const dispatch = useDispatch()
 
   const burgerMenu = useSelector((s) => s.funcReducer.isBurgerMenuActive);
+  const popupForm = useSelector((s) => s.funcReducer.isPopupFormActive);
   const popupThanks = useSelector((s) => s.funcReducer.isPopupThanksActive);
   const popupSoon = useSelector((s) => s.funcReducer.isPopupSoonActive);
   const dropdown = useSelector((s) => s.funcReducer.isDropdownActive);
@@ -34,6 +35,10 @@ const AboutUs = () => {
 
   const buttonHandler = () => {
     dispatch(popupSoonToggle(!popupSoon))
+  }
+
+  const buttonChatHandler = () => {
+    dispatch(popupFormToggle(!popupForm))
   }
 
   const dropdownHandler = (e) => {
@@ -82,7 +87,7 @@ const AboutUs = () => {
             <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
             <div className={burgerMenu ? 'burger-menu__line burger-menu__line_active': 'burger-menu__line'}></div>
           </div>
-          <button type="button" onClick={buttonHandler} 
+          <button type="button" onClick={buttonChatHandler} 
           className={sticky ? 'aboutUsMain__button aboutUsMain__button_active' : 'aboutUsMain__button'}>
             <img src={message} alt="message" /></button>
         </div>
@@ -90,11 +95,11 @@ const AboutUs = () => {
       <div className="main-page" id="main-page">
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-6 col-sm-12 col-md-12">
             <p className="main-page__txt">Наша компания была основана в 2018 году. <br/><br/>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in facilisis metus. Nulla ligula nisl, cursus eget libero et, rutrum tincidunt justo. Fusce eget molestie lorem, eget laoreet metus. Sed sed lobortis justo, vel suscipit nunc. Sed posuere nibh eget nisl porta sollicitudin. Aenean euismod urna ligula, ut suscipit elit finibus ut.</p>
           </div>
-            <div className="col-6">
+            <div className="col-6 col-sm-12 col-md-12">
             <img src={notebook} className="home__img aboutUs" alt="notebook" />
               <div className="home__ellipse aboutUs"></div>
           </div>

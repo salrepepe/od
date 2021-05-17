@@ -701,11 +701,11 @@
 .feedbacks__button.right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  left: 0;
+  left: 28%;
 }
 
 .feedbacks__button.left {
-  right: 0;
+  right: 31%;
 }
 
 .cta {
@@ -1083,7 +1083,7 @@
   font-family: Segoe UI;
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.6rem;
   line-height: 21px;
   color: #FFFFFF;
   line-height: 32px;
@@ -1556,6 +1556,15 @@ body {
 }
 
 @media (max-width: 414px) {
+  .overlay .popup-form {
+    max-width: 353px;
+  }
+  .overlay .popup-thanks {
+    max-width: 351px;
+  }
+  .aboutUsMain__button {
+    right: 22px;
+  }
   .home {
     padding-bottom: 400px;
   }
@@ -1627,7 +1636,7 @@ body {
     font-size: 18px;
   }
   .home__ellipse.aboutUs {
-    top: 100%;
+    top: 59%;
     right: -39%;
   }
   .aboutUsMain__ellipse.aboutUs {
@@ -1635,9 +1644,9 @@ body {
     right: -16%;
   }
   .home__img.aboutUs {
-    top: 117%;
-    right: -7%;
-    width: 375px;
+    top: 58%;
+    right: -27%;
+    width: 525px;
     height: 45%;
   }
   .aboutUs .dev-process .row .col-sm-12 {
@@ -1667,7 +1676,7 @@ body {
     padding: 241px 0 500px;
   }
   .home__ellipse.aboutUs {
-    top: 82%;
+    top: 53%;
     right: -58%;
   }
   .aboutUsMain__ellipse.aboutUs {
@@ -1675,7 +1684,9 @@ body {
     right: -34%;
   }
   .home__img.aboutUs {
-    top: 104%;
+    top: 55%;
+    right: -19%;
+    width: 440px;
   }
 }
 /*# sourceMappingURL=style.css.map */
