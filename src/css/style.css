@@ -183,7 +183,8 @@
 }
 
 .home__img.aboutUs {
-  top: 14%;
+  top: 22%;
+  right: 1%;
 }
 
 .home__ellipse {
@@ -199,8 +200,10 @@
 }
 
 .home__ellipse.aboutUs {
-  top: 13%;
+  top: 20%;
   right: -11%;
+  -webkit-animation: none;
+          animation: none;
 }
 
 @-webkit-keyframes ellipse {
@@ -256,7 +259,7 @@
 }
 
 .aboutUsMain__ellipse {
-  top: -69%;
+  top: -64%;
   right: 0%;
   position: absolute;
   width: 618px;
@@ -266,7 +269,7 @@
 }
 
 .aboutUsMain__ellipse.aboutUs {
-  top: -55%;
+  top: -50%;
   right: -2%;
 }
 
@@ -617,23 +620,6 @@
   border: none;
 }
 
-.feedbacks .cards:nth-child(2) {
-  -webkit-transform: scale(0.8) !important;
-          transform: scale(0.8) !important;
-  border: 1px solid #FFFFFF;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.feedbacks .cards:nth-child(2):before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: none;
-}
-
 .feedbacks .cards:before {
   content: '';
   width: 100%;
@@ -642,6 +628,23 @@
   top: 0;
   left: 0;
   background: rgba(31, 36, 43, 0.6);
+}
+
+.feedbacks .cards_active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  border: 1px solid #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feedbacks .cards_active:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
 }
 
 .feedbacks .cards__img {
@@ -859,6 +862,7 @@
 }
 
 .aboutUs .main-page {
+  position: relative;
   padding: 241px 0 271px;
 }
 
@@ -1151,10 +1155,6 @@ html {
   overflow-x: hidden;
 }
 
-.aboutUs {
-  overflow-x: hidden;
-}
-
 body {
   background: #1F242B;
   overflow-x: hidden;
@@ -1164,6 +1164,9 @@ body {
   .aboutUs .our-team__img {
     width: 266px;
     height: 267px;
+  }
+  .aboutUsMain__ellipse {
+    top: -60%;
   }
 }
 
@@ -1203,7 +1206,7 @@ body {
     margin-top: 18px;
   }
   .aboutUsMain__ellipse {
-    top: -50%;
+    top: -48%;
   }
   .aboutUsMain .ellipsis-block__ellipsis {
     left: -349px;
@@ -1307,8 +1310,8 @@ body {
     height: 600px;
   }
   .aboutUsMain__ellipse {
-    top: -39%;
-    right: 0%;
+    top: -38%;
+    right: -1%;
     position: absolute;
     width: 400px;
     height: 400px;
@@ -1438,7 +1441,7 @@ body {
     top: 50%;
   }
   .aboutUsMain__ellipse {
-    top: -36%;
+    top: -33%;
     right: 2%;
   }
   .home__img {
@@ -1499,7 +1502,7 @@ body {
     top: 62%;
   }
   .aboutUsMain__ellipse.aboutUs {
-    top: -17%;
+    top: -10%;
     right: 2%;
   }
   .home__img.aboutUs {
